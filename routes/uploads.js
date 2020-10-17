@@ -1,8 +1,8 @@
 const express = require('express');
+const uploadsController = require('../controllers/Uploads');
 const router = express.Router();
 
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+
+router.post('/', uploadsController.create);
 
 module.exports = router;
