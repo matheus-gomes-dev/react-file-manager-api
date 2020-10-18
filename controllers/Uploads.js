@@ -26,7 +26,7 @@ module.exports = {
       const result = await UploadsModel.findByPk(id, {
         include: { association: 'uploaded_data' }
       });
-      if (!result) res.status(400).send({ message: 'Upload not found' });
+      if (!result) res.status(404).send({ message: 'Upload not found' });
       return res.status(200).send(result);
     } catch (error) {
       console.log(error);
