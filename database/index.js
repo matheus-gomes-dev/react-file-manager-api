@@ -8,4 +8,7 @@ const connection = new Sequelize(dbConfig);
 Uploads.init(connection);
 UploadedData.init(connection);
 
+Uploads.associate(connection.models);
+UploadedData.associate(connection.models);
+
 module.exports = connection;

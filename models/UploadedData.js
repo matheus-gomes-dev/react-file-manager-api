@@ -13,6 +13,11 @@ class UploadedData extends Model {
       sequelize
     });
   }
+
+  static associate(models) {
+    this.belongsTo(models.Uploads, { foreignKey: 'upload_id', as: 'upload' })
+  }
+
 }
 
 module.exports = UploadedData;
