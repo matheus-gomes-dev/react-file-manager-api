@@ -5,7 +5,8 @@ const utils = require('../utils');
 
 module.exports = {
   read: async (req, res) => {
-    const page = Number(get(req, 'query.page', 1));
+    let page = Number(get(req, 'query.page'));
+    page = isNaN(page) ? 1 : page;
     const limit = 10;
     const offset = (page - 1) * limit;
     try {
