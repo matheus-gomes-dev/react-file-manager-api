@@ -11,7 +11,10 @@ module.exports = {
       },
       upload_id: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references: { model: 'uploads', key: 'id' },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE'
       },
       yard_code: {
         type: Sequelize.STRING,

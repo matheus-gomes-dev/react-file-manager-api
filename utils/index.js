@@ -9,7 +9,7 @@ module.exports = {
         .pipe(csv())
         .on('data', (data) => results.push(data))
         .on('end', () => {
-          fs.unlink(path);
+          fs.unlinkSync(path);
           resolve(results);
         })
         .on('error', () => reject());
