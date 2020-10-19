@@ -1,3 +1,12 @@
+## Running Locally
+
+```
+npm install
+npm start
+```
+
+The API will be running on port 5000
+
 ## Database Settings
 
 This project uses PostreSQL, you will need it installed in your machine, and also sequelize-cli
@@ -8,15 +17,6 @@ yarn add sequelize-cli -D
 yarn sequelize db:create
 yarn sequelize db:migrate
 ```
-
-## Running Locally
-
-```
-npm install
-npm start
-```
-
-The API will be running on port 5000
 
 ## Unit Tests
 
