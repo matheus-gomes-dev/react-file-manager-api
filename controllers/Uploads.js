@@ -16,7 +16,6 @@ module.exports = {
       });
       return res.status(200).send(results);
     } catch (error) {
-      console.log(error);
       return res.status(500).send({ message: 'Failed to read uploads' });
     }
   },
@@ -29,7 +28,6 @@ module.exports = {
       if (!result) res.status(404).send({ message: 'Upload not found' });
       return res.status(200).send(result);
     } catch (error) {
-      console.log(error);
       return res.status(500).send({ message: 'Failed to read upload by id' });
     }
   },
@@ -53,7 +51,6 @@ module.exports = {
       await UploadedDataModel.bulkCreate(records);
       return res.status(200).send(result);
     } catch(error) {
-      console.log(error);
       return res.status(500).send({ message: 'Failed to store upload' });
     }
   }
