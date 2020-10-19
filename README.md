@@ -1,7 +1,25 @@
+## Database Settings
+
+This project uses PostreSQL, you will need it installed in your machine, and also sequelize-cli
+to create the database and run the migrations in the project root folder:
+
 ```
 yarn add sequelize-cli -D
-sudo apt-get install postgresql-client-common postgresql-client
-sudo -u postgres psql -c "ALTER USER postgres PASSWORD 'postgres';"
 yarn sequelize db:create
 yarn sequelize db:migrate
 ```
+
+## Running Locally
+
+```
+npm install
+npm start
+```
+
+The API will be running on port 5000
+
+## Unit Tests
+
+```
+npm test
+``` 
